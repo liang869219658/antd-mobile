@@ -33,18 +33,17 @@ module.exports = {
     },
     output: {
       path: commonPath.public,
-      publicPath: '/static/'
+      publicPath: '/'
     },
     resolve: {
-      extensions: ['', '.js', '.jsx', '.json'],
-      alias: { }
+      extensions: ['', '.js', '.jsx', '.json']
     },
     module: {
       loaders: [
         {
           test: /\.js[x]?$/,
           loaders: ['react-hot', 'babel?cacheDirectory=true'],
-          exclude: path.join(rootPath, 'node_modules')
+          exclude: path.join(rootPath, 'node_modules')  //表示哪些目录中的 .js 文件不要进行 babel-loader
         },
         {
           test: /\.json$/,
@@ -70,11 +69,14 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
         title: 'your app title',
-        template: commonPath.indexHTML
+        template: commonPath.indexHTML  //模板的路径。支持加载器，例如 html!./index.html。
       }),
       new webpack.DefinePlugin({
         __DEV__: env === 'development',
-        __PROD__: env === 'production'
+        __PROD__: env === 'production',
+        'process.env': {
+          'NODE_ENV': '"' + process.env.NODE_ENV + '"'
+        }
       })
     ]
 };

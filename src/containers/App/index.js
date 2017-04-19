@@ -1,10 +1,11 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as Actions from '../../actions';
+import PropTypes from 'prop-types'; // ES6
 import { MyComponent } from '../../components';
 
-import './index.css';
+import './index.less';
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class App extends Component {
       <div>
         <MyComponent />
         <p>
-          欢迎在github上一起维护这个脚手架项目<br />
+          欢迎在github上一起维护这个脚手架项目测试<br />
           https://github.com/GuoYongfeng
         </p>
       </div>
@@ -27,7 +28,7 @@ class App extends Component {
 
 
 App.contextTypes = {
-	router: React.PropTypes.object.isRequired
+	router: PropTypes.object.isRequired
 };
 
 

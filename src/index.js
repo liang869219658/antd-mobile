@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { Router,browserHistory } from 'react-router';
 import configureStore from './store/configureStore';
 import { RouterConfig } from './routes';
-import './scss/index.scss';
+import './scss/index.less';
 
 const initialState = {
 	user: {

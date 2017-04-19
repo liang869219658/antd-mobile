@@ -4,7 +4,7 @@
   "description": "boilerplate",
   "main": "app/index.js",
   "scripts": {
-    "start:pre":"webpack --config conf/webpack.dll.config.js",
+    "start:pre": "webpack --config conf/webpack.dll.config.js",
     "start": "cross-env NODE_ENV=development node conf/server.dev.js",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --progress --colors --config conf/webpack.prod.config.js",
     "lint": "eslint app",
@@ -30,7 +30,8 @@
   "homepage": "https://github.com/GuoYongfeng/webpack-dev-boilerplate#readme",
   "dependencies": {
     "history": "^4.4.1",
-    "react": "^15.3.2",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.3",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.6",
     "react-router": "^3.0.0",
