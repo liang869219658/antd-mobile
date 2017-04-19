@@ -71,7 +71,7 @@ config.plugins.push(
   new webpack.optimize.OccurenceOrderPlugin(),
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NoErrorsPlugin(),
-  new ExtractTextPlugin('[name].css'),
+  //new ExtractTextPlugin('[name].css'),
   new BrowserSyncPlugin({
     host: '127.0.0.1',
     port: 9090,

@@ -68,12 +68,9 @@ module.exports = {
         }
       ]
     },
-    // postcss: [       //高清解决方案
-    //   pxtorem({
-    //     rootValue: 100,
-    //     propWhiteList: [],
-    //   })
-    // ],
+    postcss: [
+      pxtorem({ rootValue: 100, propWhiteList: [] })
+    ],
     plugins: [
       new HtmlWebpackPlugin({
         title: 'your app title',
