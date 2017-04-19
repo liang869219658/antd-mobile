@@ -29,9 +29,11 @@
   },
   "homepage": "https://github.com/GuoYongfeng/webpack-dev-boilerplate#readme",
   "dependencies": {
+    "antd-mobile": "^1.0.8",
+    "babel-plugin-import": "^1.1.1",
     "history": "^4.4.1",
-    "prop-types": "^15.5.8",
-    "react": "^15.5.3",
+    "postcss-pxtorem": "^4.0.0",
+    "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.6",
     "react-router": "^3.0.0",

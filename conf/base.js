@@ -3,6 +3,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+var pxtorem = require('postcss-pxtorem');
 
 var rootPath = path.resolve(__dirname, '..');     // 项目根目录
 var srcPath = path.join(rootPath, 'src');             // 开发源码目录
@@ -36,7 +37,8 @@ module.exports = {
       publicPath: '/'
     },
     resolve: {
-      extensions: ['', '.js', '.jsx', '.json']
+      modulesDirectories: ['node_modules', path.join(__dirname, '../node_modules')],
+      extensions: ['', '.web.js', '.js', '.json']
     },
     module: {
       loaders: [
@@ -66,6 +68,12 @@ module.exports = {
         }
       ]
     },
+    // postcss: [       //高清解决方案
+    //   pxtorem({
+    //     rootValue: 100,
+    //     propWhiteList: [],
+    //   })
+    // ],
     plugins: [
       new HtmlWebpackPlugin({
         title: 'your app title',
